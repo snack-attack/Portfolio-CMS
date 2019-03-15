@@ -71,7 +71,10 @@
                 <p>A selection of client case studies and personal projects.</p>
             </div>
             <div>
-                <div class="work-card">
+                <?php 
+                    include_once('./projects.php');
+                ?>
+                <!-- <div class="work-card">
                     <div class="meta">
                         <img src="assets/img/workcard-backgrounds/5.jpg"
                         class="photo" alt="photo of colored stucco-like
@@ -119,8 +122,8 @@
                             <a href="https://www.brassmillmedia.com">Visit Site</a>
                         </p>
                     </div>
-                </div>
-            </div>
+                </div>-->
+            </div> 
         </section>
 
         <section class="about">
