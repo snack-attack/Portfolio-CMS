@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.6.43)
 # Database: portfolio-cms
-# Generation Time: 2019-03-15 15:20:58 +0000
+# Generation Time: 2019-03-15 15:42:10 +0000
 # ************************************************************
 
 
@@ -18,28 +18,6 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-
-
-# Dump of table permissions
-# ------------------------------------------------------------
-
-DROP TABLE IF EXISTS `permissions`;
-
-CREATE TABLE `permissions` (
-  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `role` varchar(255) NOT NULL DEFAULT '',
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
-LOCK TABLES `permissions` WRITE;
-/*!40000 ALTER TABLE `permissions` DISABLE KEYS */;
-
-INSERT INTO `permissions` (`id`, `role`)
-VALUES
-	(1,'admin');
-
-/*!40000 ALTER TABLE `permissions` ENABLE KEYS */;
-UNLOCK TABLES;
 
 
 # Dump of table project
@@ -120,33 +98,6 @@ VALUES
 	(3,'Custom Plugin');
 
 /*!40000 ALTER TABLE `tag` ENABLE KEYS */;
-UNLOCK TABLES;
-
-
-# Dump of table user
-# ------------------------------------------------------------
-
-DROP TABLE IF EXISTS `user`;
-
-CREATE TABLE `user` (
-  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `first_name` varchar(252) NOT NULL DEFAULT '',
-  `last_name` varchar(252) NOT NULL DEFAULT '',
-  `email` varchar(320) NOT NULL DEFAULT '',
-  `permissions_id` int(11) unsigned NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `permissions_id` (`permissions_id`),
-  CONSTRAINT `user_ibfk_1` FOREIGN KEY (`permissions_id`) REFERENCES `permissions` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
-LOCK TABLES `user` WRITE;
-/*!40000 ALTER TABLE `user` DISABLE KEYS */;
-
-INSERT INTO `user` (`id`, `first_name`, `last_name`, `email`, `permissions_id`)
-VALUES
-	(1,'Audrey','Hayes','howdy@audreyhayes.dev',1);
-
-/*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 
 
