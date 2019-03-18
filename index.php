@@ -74,55 +74,6 @@
                 <?php 
                     include_once('./projects.php');
                 ?>
-                <!-- <div class="work-card">
-                    <div class="meta">
-                        <img src="assets/img/workcard-backgrounds/5.jpg"
-                        class="photo" alt="photo of colored stucco-like
-                        texture">
-                    </div>
-                    <div class="description">
-                        <h2>European Conference on Politics & Gender</h2>
-                        <h4>Site Redesign & Custom Plugin</h4>
-                        <p>Fully responsive custom theme using Concrete5 CMS and
-                        a plugin that handles conference submissions for
-                        hundreds of users and allows site admins to manage
-                        submission decisions and create reports.</p>
-                        <p>Tech Used: PHP, Javascript, HTML5, CSS3, Bootstrap 3/4</p>
-                        <p class="read-more">
-                            <a href="https://www.ecpg.eu/">Visit Site</a>
-                        </p>
-                    </div>
-                </div>
-                <div class="work-card alt">
-                    <div class="meta">
-                        <img src="assets/img/workcard-backgrounds/9.jpg"
-                        class="photo" alt="photo of colored stucco-like
-                        texture">
-                    </div>
-                    <div class="description"> 
-                        <h2>Bath Institute for Rheumatic Disease</h2>
-                        <h4>Site Redesign</h4>
-                        <p>Custom theme development using WordPress.</p>
-                        <p class="read-more">
-                            <a href="http://www.birdbath.org.uk/">Visit Site</a>
-                        </p>
-                    </div>
-                </div>
-                <div class="work-card">
-                    <div class="meta">
-                        <img src="assets/img/workcard-backgrounds/33.jpg"
-                        class="photo" alt="photo of colored stucco-like
-                        texture">
-                    </div>
-                    <div class="description"> 
-                        <h2>Brass Mill Media</h2>
-                        <h4>Landing Page</h4>
-                        <p>Concept design and static site development.</p>
-                        <p class="read-more">
-                            <a href="https://www.brassmillmedia.com">Visit Site</a>
-                        </p>
-                    </div>
-                </div>-->
             </div> 
         </section>
 
