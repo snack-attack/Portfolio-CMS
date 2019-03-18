@@ -25,10 +25,10 @@
                 <textarea placeholder="Enter Description" name="description" required></textarea>
 
                 <label for="site_url"><b>Site URL</b></label>
-                <input type="url" placeholder="Enter Site URL" name="site_url" required></input>
+                <input type="url" placeholder="Enter Site URL" name="site_url"></input>
 
                 <label for="code_url"><b>Code URL</b></label>
-                <input type="url" placeholder="Enter Site URL" name="code_url" required></input>
+                <input type="url" placeholder="Enter Site URL" name="code_url"></input>
 
                 <button type="submit">Submit</button>
             </div>
