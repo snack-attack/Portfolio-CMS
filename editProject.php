@@ -22,3 +22,5 @@ if(!empty($_POST['title']) && !empty($_POST['description'])) {
     $result = $query->execute();
 }
 
+
+

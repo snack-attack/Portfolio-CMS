@@ -2,19 +2,19 @@
 require_once './database.php';
 
 //get projects
-$sql = "SELECT * FROM `project`;";
+$sql = "SELECT `id`, `title`, `description`, `site_url`, `code_url` FROM `project`;";
 $query = $db->prepare($sql);
 $query->execute();
 $projects = $query->fetchAll();
 
 //get tags
-$sql = "SELECT * FROM `tag`;";
+$sql = "SELECT `id`, `name` FROM `tag`;";
 $query = $db->prepare($sql);
 $query->execute();
 $tags = $query->fetchAll();
 
 //get project tag relationships
-$sql = "SELECT *, `tag`.`name` as name FROM `project_tag`
+$sql = "SELECT `project_id`, `tag`.`name` as tagname FROM `project_tag`
         JOIN `tag` ON `tag_id`=`tag`.`id`;";
 $query = $db->prepare($sql);
 $query->execute();
@@ -35,7 +35,7 @@ if(!empty($projects)) {
         $tags = [];
         foreach($project_tags as $project_tag) {
             if ($project_tag['project_id'] == $project['id']) {
-                array_push($tags, $project_tag['name']); 
+                array_push($tags, $project_tag['tagname']); 
             }
         }
         echo implode (', ', $tags);

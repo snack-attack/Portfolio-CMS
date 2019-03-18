@@ -30,6 +30,9 @@
                 <label for="code_url">Code URL</label>
                 <input type="url" placeholder="Enter Site URL" name="code_url"></input>
 
+                <label for="tags">Tags</label>
+                
+
                 <button type="submit">Submit</button>
             </div>
         </form> 
