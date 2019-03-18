@@ -1,3 +1,7 @@
+<?php
+include_once 'database.php';
+
+?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -31,7 +35,15 @@
                 <input type="url" placeholder="Enter Site URL" name="code_url"></input>
 
                 <label for="tags">Tags</label>
-                
+                <?php
+                $sql = "SELECT `tag`.`name` as name FROM `tag`;";
+                        $query = $db->prepare($sql);
+                        $query->execute();
+                        $results = $query->fetchAll();
+                        foreach($results as $result) {
+                            echo '<input type="radio" name='. $result['name'] . '>' . $result['name'] . '</input>';
+                        }
+                ?>
 
                 <button type="submit">Submit</button>
             </div>

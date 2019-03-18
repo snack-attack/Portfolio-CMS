@@ -38,6 +38,10 @@ input[type=text], input[type=password], input[type=url], textarea {
     box-sizing: border-box;
 }
 
+input[type=radio] {
+    display: block;
+}
+
 textarea {
     max-width: 100%;
 }
