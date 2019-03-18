@@ -46,7 +46,7 @@ li {
 
 @media only screen and (min-width: 1400px) {
     body {
-        max-width: 1400px;
+        max-width: 1500px;
         margin: 0 auto;
     }
 }
@@ -334,7 +334,7 @@ header .top-header {
         -webkit-box-direction: normal;
             -ms-flex-direction: row;
                 flex-direction: row;
-        max-width: 700px;
+        max-width: 800px;
     }
     .work-card .meta {
         -ms-flex-preferred-size: 40%;
@@ -345,7 +345,7 @@ header .top-header {
         -ms-flex-preferred-size: 60%;
             flex-basis: 60%;
     }
-    .work-card .description:before {
+    .work-card .description::before {
         -webkit-transform: skewX(-3deg);
                 transform: skewX(-3deg);
         content: "";
