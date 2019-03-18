@@ -345,7 +345,7 @@ header .top-header {
         -ms-flex-preferred-size: 60%;
             flex-basis: 60%;
     }
-    .work-card .description:before {
+    .work-card .description::before {
         -webkit-transform: skewX(-3deg);
                 transform: skewX(-3deg);
         content: "";

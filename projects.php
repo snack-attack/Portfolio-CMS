@@ -1,18 +1,20 @@
 <?php
 require_once './database.php';
 
-
+//get projects
 $sql = "SELECT * FROM `project`;";
 $query = $db->prepare($sql);
 $query->execute();
 $projects = $query->fetchAll();
 
-$sql = "SELECT *, `project_id` FROM `tag`;
-        JOIN `project_tag` ON `tag_id`=`tag`.`id`
-        JOIN `project` ON `project_id`=`project`.`id`";
+//get tags
+$sql = "SELECT * FROM `tag`;";
 $query = $db->prepare($sql);
 $query->execute();
 $tags = $query->fetchAll();
+
+//get project tag relationships
+$sql = "SELECT *";
 
 // var_dump($projects);
 // var_dump($tags);
@@ -23,8 +25,10 @@ foreach($projects as $project) {
     if ($project['id'] % 2 == 0) { 
         echo 'work-card';
     } else { echo 'work-card alt';}
-    echo '"><div class="meta"><img src="./assets/img/workcard-backgrounds/9.jpg" class="photo" alt="photo of colored stucco-like
-    texture"><div class="description"><h2>'. $project['title']. '</h2><h4>'; 
+    echo '"><div class="meta"><img src="./assets/img/workcard-backgrounds/';
+    //display a random photo
+    echo rand(1, 47);
+    echo '.jpg" class="photo" alt="photo of colored stucco-like texture"><div class="description"><h2>'. $project['title']. '</h2><h4>'; 
     //check project id 
     if($project['id']) {
         foreach($tags as $tag) {
