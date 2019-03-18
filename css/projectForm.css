@@ -25,6 +25,7 @@ label, button {
     font-family: 'Montserrat', sans-serif;
     font-size: 2rem;
     margin: 24px 0;   
+    font-weight: bold;
 }
   
 /* Full-width inputs */

@@ -18,16 +18,16 @@
         <h1>Create a New Project</h1>
         <form method="POST" action="editProject.php">
             <div class="container">
-                <label for="title"><b>Project Title</b></label>
+                <label for="title">Project Title</label>
                 <input type="text" placeholder="Enter Project Title" name="title" required>
 
-                <label for="description"><b>Description</b></label>
+                <label for="description">Description</label>
                 <textarea placeholder="Enter Description" name="description" required></textarea>
 
-                <label for="site_url"><b>Site URL</b></label>
+                <label for="site_url">Site URL</label>
                 <input type="url" placeholder="Enter Site URL" name="site_url"></input>
 
-                <label for="code_url"><b>Code URL</b></label>
+                <label for="code_url">Code URL</label>
                 <input type="url" placeholder="Enter Site URL" name="code_url"></input>
 
                 <button type="submit">Submit</button>

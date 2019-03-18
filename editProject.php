@@ -6,29 +6,18 @@ if(!empty($_POST['title']) && !empty($_POST['description'])) {
     $description = filter_var($_POST['description'], FILTER_SANITIZE_STRING);
     if(!empty($_POST['site_url'])) {
         $site_url = filter_var($_POST['site_url'], FILTER_VALIDATE_URL);
-
-        $sql = "INSERT INTO `project` (`site_url`) VALUES (:site_url);";
-        $query = $db->prepare($sql);
-        $query->bindParam(':site_url', $site_url); 
-    
-        $result = $query->execute();
-
-        
     }
     if(!empty($_POST['code_url'])) {
         $code_url = filter_var($_POST['code_url'], FILTER_VALIDATE_URL);
-
-        $sql = "INSERT INTO `project` (`code_url`) VALUES (:code_url);";
-        $query = $db->prepare($sql);
-        $query->bindParam(':code_url', $code_url); 
-    
-        $result = $query->execute();
     }
-
-    $sql = "INSERT INTO `project` (`title`, `description`) VALUES (:title, :description);";
+    
+    $sql = "INSERT INTO `project` (`title`, `description`, `site_url`, `code_url`) 
+            VALUES (:title, :description, :site_url, :code_url);";
     $query = $db->prepare($sql);
     $query->bindParam(':title', $title); 
     $query->bindParam(':description', $description);
+    $query->bindParam(':site_url', $site_url); 
+    $query->bindParam(':code_url', $code_url); 
 
     $result = $query->execute();
 }
