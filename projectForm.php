@@ -20,7 +20,7 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <h1>Create a New Project</h1>
-        <form method="POST" action="editProject.php">
+        <form method="POST" action="addProject.php">
             <div class="container">
                 <label for="title">Project Title</label>
                 <input type="text" placeholder="Enter Project Title" name="title" required>
@@ -34,7 +34,7 @@
                 <label for="code_url">Code URL</label>
                 <input type="url" placeholder="Enter Site URL" name="code_url"></input>
 
-                <label for="tags">Tags</label>
+                <!-- <label for="tags">Tags</label>
                 <?php
                 $sql = "SELECT `id`, `tag`.`name` as name FROM `tag`;";
                         $query = $db->prepare($sql);
@@ -43,7 +43,7 @@
                         foreach($results as $result) {
                             echo '<div><input type="checkbox" value="' . $result['id'] . '" name="tags[]"> ' . $result['name'] . '</input></div>';
                         }
-                ?>
+                ?> -->
 
                 <button type="submit">Submit</button>
             </div>

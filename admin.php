@@ -2,12 +2,13 @@
 require_once './database.php';
 
 //get projects
-$sql = "SELECT * FROM `project`;";
+$sql = "SELECT `id`, `title` FROM `project`;";
 $query = $db->prepare($sql);
 $query->execute();
 $projects = $query->fetchAll();
 
 ?>
+
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -40,10 +41,11 @@ $projects = $query->fetchAll();
                         echo '<tr><td data-label="Title">';
                         echo $project['title'];
                         echo '</td>
-                        <td>
-                        <button class="edit">Edit</button>
-                        <button class="delete">Delete</button>
-                        </td></tr>';
+                            <td>
+                                <a href="portfolio-cms/projectForm.php/' . $project['id']; echo '">Edit</a>
+                                <a href="/projectForm.php/' . $project['id']; echo '" id="delete">Delete</a>
+                            </td>
+                        </tr>';
                     }
                 ?>
             </tbody>
