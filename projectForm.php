@@ -16,7 +16,7 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <h1>Create a New Project</h1>
-        <form action="editProject.php">
+        <form method="POST" action="editProject.php">
             <div class="container">
                 <label for="title"><b>Project Title</b></label>
                 <input type="text" placeholder="Enter Project Title" name="title" required>
