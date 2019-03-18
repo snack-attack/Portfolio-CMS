@@ -1,0 +1,71 @@
+:root {
+    box-sizing: border-box;
+    color: black;
+    font-size: 62.5%;
+    margin: 0;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+h1 {
+    font-family: 'Anton', sans-serif;
+    font-size: 5rem;
+    letter-spacing: 0.2rem;
+    text-align: center;
+}
+ 
+/* Bordered form */
+form {
+    border: 3px solid #f1f1f1;
+    width: 50%;
+    margin: 3vh auto;
+}
+
+label, button {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    margin: 24px 0;   
+}
+  
+/* Full-width inputs */
+input[type=text], input[type=password], input[type=url], textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+textarea {
+    max-width: 100%;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.cancel {
+    margin-left: 25%;
+    margin-right: 25%;
+    width: 50%;
+    background-color: #FF0000;
+}
+
+/* Add a hover effect for buttons */
+button:hover {
+    opacity: 0.8;
+}
+
+
+/* Add padding to containers */
+.container {
+    padding: 16px;
+}
