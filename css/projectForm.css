@@ -1,10 +1,14 @@
 :root {
     box-sizing: border-box;
     color: black;
-    font-size: 62.5%;
     margin: 0;
+    font-size: 62.5%;
     scrollbar-width: none;
     -ms-overflow-style: none;
+}
+
+body {
+    font-size: 2rem;
 }
 
 h1 {
@@ -39,7 +43,7 @@ input[type=text], input[type=password], input[type=url], textarea {
 }
 
 input[type=radio] {
-    display: block;
+    margin: 1vh auto;
 }
 
 textarea {

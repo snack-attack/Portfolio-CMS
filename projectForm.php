@@ -1,5 +1,5 @@
 <?php
-include_once 'database.php';
+    include_once 'database.php';
 
 ?>
 <!DOCTYPE html>
@@ -36,12 +36,12 @@ include_once 'database.php';
 
                 <label for="tags">Tags</label>
                 <?php
-                $sql = "SELECT `tag`.`name` as name FROM `tag`;";
+                $sql = "SELECT `id`, `tag`.`name` as name FROM `tag`;";
                         $query = $db->prepare($sql);
                         $query->execute();
                         $results = $query->fetchAll();
                         foreach($results as $result) {
-                            echo '<input type="radio" name='. $result['name'] . '>' . $result['name'] . '</input>';
+                            echo '<div><input type="checkbox" value="' . $result['id'] . '" name="tags[]"> ' . $result['name'] . '</input></div>';
                         }
                 ?>
 
