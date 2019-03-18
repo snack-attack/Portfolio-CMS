@@ -14,12 +14,19 @@ $query = $db->prepare($sql);
 $query->execute();
 $tags = $query->fetchAll();
 
-var_dump($tags);
+// var_dump($projects);
+// var_dump($tags);
 
 foreach($projects as $project) {
-    echo '<div class="work-card"><div class="meta"><img src="" class="photo"><div class="description"><h2>'. $project['title']. '</h2><h4>'; 
+    echo '<div class="';
+    //alternate classes so the card style switches every other project
+    if ($project['id'] % 2 == 0) { 
+        echo 'work-card';
+    } else { echo 'work-card alt';}
+    echo '"><div class="meta"><img src="./assets/img/workcard-backgrounds/9.jpg" class="photo" alt="photo of colored stucco-like
+    texture"><div class="description"><h2>'. $project['title']. '</h2><h4>'; 
     //check project id 
-    if($project['id'] == ) {
+    if($project['id']) {
         foreach($tags as $tag) {
             echo $tag['name'];
         }
