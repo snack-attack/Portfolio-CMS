@@ -35,9 +35,16 @@ foreach($projects as $project) {
     echo rand(1, 47);
     echo '.jpg" class="photo" alt="photo of colored stucco-like texture"><div class="description"><h2>'. $project['title']. '</h2><h4>'; 
     //check tags and display if any
+    $counter = 0;
     foreach($project_tags as $project_tag) {
         if ($project_tag['project_id'] == $project['id']) {
-            echo $project_tag['name'];
+            $counter = $counter++;
+            if ( $counter > 1 ) {
+                echo ' ,' . $project_tag['name'];
+            } else { 
+                echo $project_tag['name']; 
+            }
+            return $counter;
         }
     }
     echo '</h4><p>' . $project['description'] . '</p><p class="read-more"><a href="' . $project['site_url'] . '">Visit Site</a></p></div></div></div>';
