@@ -24,12 +24,15 @@
                 <label for="description"><b>Description</b></label>
                 <textarea placeholder="Enter Description" name="description" required></textarea>
 
-                <label for="site_url"><b>Description</b></label>
-                <input type="text" placeholder="Enter Site URL" name="site_url" required></input>
+                <label for="site_url"><b>Site URL</b></label>
+                <input type="url" placeholder="Enter Site URL" name="site_url" required></input>
+
+                <label for="code_url"><b>Code URL</b></label>
+                <input type="url" placeholder="Enter Site URL" name="code_url" required></input>
 
                 <button type="submit">Submit</button>
             </div>
         </form> 
-            <button type="button" class="cancel">Back to Admin Panel</button>
+        <button type="button" class="cancel">Back to Admin Panel</button>
     </body>
 </html>
