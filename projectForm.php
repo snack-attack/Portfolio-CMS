@@ -15,20 +15,21 @@
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <form action="action_page.php">
+        <h1>Create a New Project</h1>
+        <form action="editProject.php">
             <div class="container">
                 <label for="title"><b>Project Title</b></label>
                 <input type="text" placeholder="Enter Project Title" name="title" required>
 
-                <label for="psw"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="psw" required>
+                <label for="description"><b>Description</b></label>
+                <textarea placeholder="Enter Description" name="description" required></textarea>
+
+                <label for="site_url"><b>Description</b></label>
+                <input type="text" placeholder="Enter Site URL" name="site_url" required></input>
 
                 <button type="submit">Submit</button>
-
-            <div class="container" style="background-color:#f1f1f1">
-                <button type="button" class="cancelbtn">Cancel</button>
             </div>
         </form> 
-        
+            <button type="button" class="cancel">Back to Admin Panel</button>
     </body>
 </html>
