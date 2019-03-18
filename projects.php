@@ -30,7 +30,7 @@ foreach($projects as $project) {
     echo '"><div class="meta"><img src="./assets/img/workcard-backgrounds/';
     //display a random photo
     echo rand(1, 47);
-    echo '.jpg" class="photo" alt="photo of colored stucco-like texture"><div class="description"><h2>'. $project['title']. '</h2><h4>'; 
+    echo '.jpg" class="photo" alt="photo of colored stucco-like texture"></div><div class="description"><h2>'. $project['title']. '</h2><h4>'; 
     //check tags and display if any
     $tags = [];
     foreach($project_tags as $project_tag) {
