@@ -20,9 +20,6 @@ $query = $db->prepare($sql);
 $query->execute();
 $project_tags = $query->fetchAll();
 
-// var_dump($projects);
-// var_dump($tags);
-// var_dump($project_tags);
 
 foreach($projects as $project) {
     echo '<div class="';
@@ -35,17 +32,12 @@ foreach($projects as $project) {
     echo rand(1, 47);
     echo '.jpg" class="photo" alt="photo of colored stucco-like texture"><div class="description"><h2>'. $project['title']. '</h2><h4>'; 
     //check tags and display if any
-    $counter = 0;
+    $tags = [];
     foreach($project_tags as $project_tag) {
         if ($project_tag['project_id'] == $project['id']) {
-            $counter = $counter++;
-            if ( $counter > 1 ) {
-                echo ' ,' . $project_tag['name'];
-            } else { 
-                echo $project_tag['name']; 
-            }
-            return $counter;
+            array_push($tags, $project_tag['name']); 
         }
     }
+    echo implode (', ', $tags);
     echo '</h4><p>' . $project['description'] . '</p><p class="read-more"><a href="' . $project['site_url'] . '">Visit Site</a></p></div></div></div>';
 }
