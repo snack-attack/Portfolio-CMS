@@ -1,6 +1,9 @@
 <?php
     include_once 'database.php';
 
+    $addProject = 'addProject.php';
+    $editProject = 'editProject.php';
+
     if(!empty($_GET)) {
         $projectId = $_GET['id'];
         
@@ -31,7 +34,7 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <h1>Create a New Project</h1>
-        <form method="POST" action="addProject.php">
+        <form method="POST" action="<?php if(!empty($_GET)) { echo $editProject . '?id=' . $project['id']; } else { echo $addProject; }; ?>">
             <div class="container">
                 <label for="title">Project Title</label>
                 <input type="text" placeholder="Enter Project Title" name="title" value="<?php 
