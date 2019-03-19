@@ -1,7 +1,6 @@
 <?php
 require_once './database.php';
 
-
 if(!empty($_POST['title']) && !empty($_POST['description'])) {
     $title = filter_var($_POST['title'], FILTER_SANITIZE_STRING);
     $description = filter_var($_POST['description'], FILTER_SANITIZE_STRING);
