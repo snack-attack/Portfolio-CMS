@@ -2,9 +2,6 @@
 
 include_once './database.php';
 
-var_dump($_GET);
-var_dump($_POST);
-
 if(!empty($_GET)) {
     $id = $_GET['id'];
     if(!empty($_POST['title']) && !empty($_POST['description'])) {
@@ -17,9 +14,9 @@ if(!empty($_GET)) {
             $code_url = filter_var($_POST['code_url'], FILTER_VALIDATE_URL);
         }
     
-        $sql = "UPDATE `project` SET `title`=:title, `description`=:description, `site_url`=:site_url, `code_url`=:code_url) 
+        $sql = "UPDATE `project` SET `title`=:title, `description`=:description, `site_url`=:site_url, `code_url`=:code_url 
         WHERE `id`=:id;";
-        
+
         $query = $db->prepare($sql);
         $query->bindParam(':id', $id);
         $query->bindParam(':title', $title); 
