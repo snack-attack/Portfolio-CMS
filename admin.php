@@ -45,13 +45,8 @@ $projects = $query->fetchAll();
                         echo $project['title'];
                         echo '</td>
                             <td>
-<<<<<<< HEAD
-                                <a href="projectForm.php?id=' . $project['id']; echo '">Edit</a>
-                                <a href="deleteProject.php?id=' . $project['id']; echo '" id="delete">Delete</a>
-=======
                                 <a href="projectForm.php?id=' . $project['id'] . '">Edit</a>
                                 <a href="projectForm.php?id=' . $project['id'] . '" id="delete">Delete</a>
->>>>>>> master
                             </td>
                         </tr>';
                     }
