@@ -25,7 +25,7 @@ form {
     margin: 3vh auto;
 }
 
-label, button {
+label, button, a {
     font-family: 'Montserrat', sans-serif;
     font-size: 2rem;
     margin: 24px 0;   
@@ -51,8 +51,8 @@ textarea {
 }
 
 /* Set a style for all buttons */
-button {
-    background-color: #4CAF50;
+button, .cancel {
+    background-color: #F2C041;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -60,16 +60,19 @@ button {
     cursor: pointer;
     width: 100%;
 }
+.backHome {
+    width: 50%;
+    margin: 5rem auto;
+    text-align: center;
+}
 
 .cancel {
-    margin-left: 25%;
-    margin-right: 25%;
-    width: 50%;
-    background-color: #FF0000;
+    text-decoration: none;
+    background-color: #FC5956;
 }
 
 /* Add a hover effect for buttons */
-button:hover {
+button:hover, a:hover {
     opacity: 0.8;
 }
 
