@@ -28,10 +28,7 @@ $projects = $query->fetchAll();
         <![endif]-->
         <h1>Welcome to the Admin Panel!</h1>
         <table>
-            <div class="thead">
-                <h3>Projects</h3>
-                <a href="./projectForm.php" class="createNew">Create New Project</a>
-            </div>
+            <caption>Projects</caption>
             <thead>
                 <tr>
                     <th scope="col">Project Title</th>
