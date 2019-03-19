@@ -2,9 +2,9 @@
 
 include_once './database.php';
 
-if (!empty($_GET)) {
+if (!empty($_GET['id'])) {
     $id = $_GET['id'];
-    if(!empty($_POST['title']) && !empty($_POST['description'])) {
+    if (!empty($_POST['title']) && !empty($_POST['description'])) {
         $title = filter_var($_POST['title'], FILTER_SANITIZE_STRING);
         $description = filter_var($_POST['description'], FILTER_SANITIZE_STRING);
         if (!empty($_POST['site_url'])) {

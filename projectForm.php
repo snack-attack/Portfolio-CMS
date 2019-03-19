@@ -4,7 +4,7 @@
     $addProject = 'addProject.php';
     $editProject = 'editProject.php';
 
-    if(!empty($_GET)) {
+    if (!empty($_GET['id'])) {
         $projectId = $_GET['id'];
         
         $sql = "SELECT `id`, `title`, `description`, `site_url`, `code_url` FROM `project`
@@ -34,47 +34,19 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <h1>Create a New Project</h1>
-        <form method="POST" action="<?php if(!empty($_GET)) { echo $editProject . '?id=' . $project['id']; } else { echo $addProject; }; ?>">
+        <form method="POST" action="<?php echo (!empty($_GET['id'])) ? $editProject . '?id=' . $project['id'] : $addProject; ?>">
             <div class="container">
                 <label for="title">Project Title</label>
-                <input type="text" placeholder="Enter Project Title" name="title" value="<?php 
-                    if(!empty($_GET)) { 
-                        echo $project['title'];}  
-                  ?>" required>
+                <input type="text" placeholder="Enter Project Title" name="title" value="<?= $project['title'] ?? ''; ?>" required>
 
                 <label for="description">Description</label>
-                <textarea placeholder="Enter Description" name="description" required><?php
-                    if(!empty($_GET)) {
-                        echo $project['description'];
-                    }
-                ?></textarea>
+                <textarea placeholder="Enter Description" name="description" required><?= $project['description'] ?? ''; ?></textarea>
 
                 <label for="site_url">Site URL</label>
-                <input type="url" placeholder="Enter Site URL" name="site_url" value="<?php
-                    if(!empty($_GET)) {
-                        echo $project['site_url'];
-                    }
-                ?>
-                "></input>
+                <input type="url" placeholder="Enter Site URL" name="site_url" value="<?= $project['site_url'] ?? ''; ?>"></input>
 
                 <label for="code_url">Code URL</label>
-                <input type="url" placeholder="Enter Site URL" name="code_url" value="<?php
-                    if(!empty($_GET)) {
-                        echo $project['code_url'];
-                    }
-                ?>
-                "></input>
-
-                <!-- <label for="tags">Tags</label>
-                <?php
-                $sql = "SELECT `id`, `tag`.`name` as name FROM `tag`;";
-                        $query = $db->prepare($sql);
-                        $query->execute();
-                        $results = $query->fetchAll();
-                        foreach($results as $result) {
-                            echo '<div><input type="checkbox" value="' . $result['id'] . '" name="tags[]"> ' . $result['name'] . '</input></div>';
-                        }
-                ?> -->
+                <input type="url" placeholder="Enter Site URL" name="code_url" value="<?= $project['code_url'] ?? ''; ?>"></input>
 
                 <button type="submit">Submit</button>
             </div>
