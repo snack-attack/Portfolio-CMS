@@ -1,3 +1,7 @@
+<?php
+    include_once 'database.php';
+
+?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -16,19 +20,19 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <h1>Create a New Project</h1>
-        <form method="POST" action="editProject.php">
+        <form method="POST" action="addProject.php">
             <div class="container">
-                <label for="title"><b>Project Title</b></label>
+                <label for="title">Project Title</label>
                 <input type="text" placeholder="Enter Project Title" name="title" required>
 
-                <label for="description"><b>Description</b></label>
+                <label for="description">Description</label>
                 <textarea placeholder="Enter Description" name="description" required></textarea>
 
-                <label for="site_url"><b>Site URL</b></label>
-                <input type="url" placeholder="Enter Site URL" name="site_url" required></input>
+                <label for="site_url">Site URL</label>
+                <input type="url" placeholder="Enter Site URL" name="site_url"></input>
 
-                <label for="code_url"><b>Code URL</b></label>
-                <input type="url" placeholder="Enter Site URL" name="code_url" required></input>
+                <label for="code_url">Code URL</label>
+                <input type="url" placeholder="Enter Site URL" name="code_url"></input>
 
                 <button type="submit">Submit</button>
             </div>

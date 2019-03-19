@@ -1,10 +1,14 @@
 :root {
     box-sizing: border-box;
     color: black;
-    font-size: 62.5%;
     margin: 0;
+    font-size: 62.5%;
     scrollbar-width: none;
     -ms-overflow-style: none;
+}
+
+body {
+    font-size: 2rem;
 }
 
 h1 {
@@ -21,10 +25,11 @@ form {
     margin: 3vh auto;
 }
 
-label, button {
+label, button, a {
     font-family: 'Montserrat', sans-serif;
     font-size: 2rem;
     margin: 24px 0;   
+    font-weight: bold;
 }
   
 /* Full-width inputs */
@@ -37,13 +42,17 @@ input[type=text], input[type=password], input[type=url], textarea {
     box-sizing: border-box;
 }
 
+input[type=radio] {
+    margin: 1vh auto;
+}
+
 textarea {
     max-width: 100%;
 }
 
 /* Set a style for all buttons */
-button {
-    background-color: #4CAF50;
+button, .cancel {
+    background-color: #F2C041;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -51,16 +60,20 @@ button {
     cursor: pointer;
     width: 100%;
 }
+.backHome {
+    width: 50%;
+    margin: 5rem auto;
+    text-align: center;
+}
 
 .cancel {
-    margin-left: 25%;
-    margin-right: 25%;
     width: 50%;
-    background-color: #FF0000;
+    text-decoration: none;
+    background-color: #FC5956;
 }
 
 /* Add a hover effect for buttons */
-button:hover {
+button:hover, a:hover {
     opacity: 0.8;
 }
 

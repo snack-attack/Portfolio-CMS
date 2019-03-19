@@ -2,12 +2,13 @@
 require_once './database.php';
 
 //get projects
-$sql = "SELECT * FROM `project`;";
+$sql = "SELECT `id`, `title` FROM `project`;";
 $query = $db->prepare($sql);
 $query->execute();
 $projects = $query->fetchAll();
 
 ?>
+
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -27,7 +28,10 @@ $projects = $query->fetchAll();
         <![endif]-->
         <h1>Welcome to the Admin Panel!</h1>
         <table>
-            <caption>Projects</caption>
+            <div class="thead">
+                <h3>Projects</h3>
+                <a href="./projectForm.php" class="createNew">Create New Project</a>
+            </div>
             <thead>
                 <tr>
                     <th scope="col">Project Title</th>
@@ -40,10 +44,11 @@ $projects = $query->fetchAll();
                         echo '<tr><td data-label="Title">';
                         echo $project['title'];
                         echo '</td>
-                        <td>
-                        <button class="edit">Edit</button>
-                        <button class="delete">Delete</button>
-                        </td></tr>';
+                            <td>
+                                <a href="projectForm.php?' . $project['id']; echo '">Edit</a>
+                                <a href="projectForm.php?' . $project['id']; echo '" id="delete">Delete</a>
+                            </td>
+                        </tr>';
                     }
                 ?>
             </tbody>
