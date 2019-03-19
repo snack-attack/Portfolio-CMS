@@ -1,6 +1,19 @@
 <?php
     include_once 'database.php';
 
+    if(!empty($_GET)) {
+        $projectId = $_GET['id'];
+        
+        $sql = "SELECT `id`, `title`, `description`, `site_url`, `code_url` FROM `project`
+                WHERE `id`=:projectId;";
+        $query = $db->prepare($sql);
+        $query->bindParam(':projectId', $projectId);
+        $query->execute();
+        $project = $query->fetchAll();
+
+        var_dump($project);
+    }
+
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -23,16 +36,37 @@
         <form method="POST" action="addProject.php">
             <div class="container">
                 <label for="title">Project Title</label>
-                <input type="text" placeholder="Enter Project Title" name="title" value="<?= '$' ?>" required>
+                <input type="text" placeholder="Enter Project Title" name="title" value="
+                <?php 
+                    if(!empty($_GET)) { 
+                        echo $project['title'];}  
+                  ?>" required>
 
                 <label for="description">Description</label>
-                <textarea placeholder="Enter Description" name="description" required></textarea>
+                <textarea placeholder="Enter Description" name="description" required>
+                <?php
+                    if(!empty($_GET)) {
+                        echo $project['description'];
+                    }
+                ?></textarea>
 
                 <label for="site_url">Site URL</label>
-                <input type="url" placeholder="Enter Site URL" name="site_url"></input>
+                <input type="url" placeholder="Enter Site URL" name="site_url" value="
+                <?php
+                    if(!empty($_GET)) {
+                        echo $project['site_url'];
+                    }
+                ?>
+                "></input>
 
                 <label for="code_url">Code URL</label>
-                <input type="url" placeholder="Enter Site URL" name="code_url"></input>
+                <input type="url" placeholder="Enter Site URL" name="code_url" value="
+                <?php
+                    if(!empty($_GET)) {
+                        echo $project[$code_url];
+                    }
+                ?>
+                "></input>
 
                 <!-- <label for="tags">Tags</label>
                 <?php
