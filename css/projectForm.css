@@ -67,6 +67,7 @@ button, .cancel {
 }
 
 .cancel {
+    width: 50%;
     text-decoration: none;
     background-color: #FC5956;
 }
