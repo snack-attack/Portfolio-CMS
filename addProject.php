@@ -11,7 +11,6 @@ if(!empty($_POST['title']) && !empty($_POST['description'])) {
         $code_url = filter_var($_POST['code_url'], FILTER_VALIDATE_URL);
     }
     
-    
     $sql = "INSERT INTO `project` (`title`, `description`, `site_url`, `code_url`) 
             VALUES (:title, :description, :site_url, :code_url);";
     $query = $db->prepare($sql);
