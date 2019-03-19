@@ -23,7 +23,7 @@
         <form method="POST" action="addProject.php">
             <div class="container">
                 <label for="title">Project Title</label>
-                <input type="text" placeholder="Enter Project Title" name="title" required>
+                <input type="text" placeholder="Enter Project Title" name="title" value="<?= '$' ?>" required>
 
                 <label for="description">Description</label>
                 <textarea placeholder="Enter Description" name="description" required></textarea>
