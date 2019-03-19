@@ -21,6 +21,8 @@ if (!empty($_POST['title']) && !empty($_POST['description'])) {
 
     $query->execute();
 
+    header('Location: admin.php');
+
 }
 
 
