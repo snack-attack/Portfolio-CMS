@@ -43,7 +43,7 @@ $projects = $query->fetchAll();
                         echo '</td>
                             <td>
                                 <a href="projectForm.php?id=' . $project['id']; echo '">Edit</a>
-                                <a href="projectForm.php?id=' . $project['id']; echo '" id="delete">Delete</a>
+                                <a href="deleteProject?id=' . $project['id']; echo '" id="delete">Delete</a>
                             </td>
                         </tr>';
                     }
