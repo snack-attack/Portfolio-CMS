@@ -25,6 +25,7 @@ if(!empty($_GET)) {
         $query->bindParam(':code_url', $code_url); 
     
         $result = $query->execute();
+        header('Location:admin.php');
     }
 }
 
