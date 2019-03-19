@@ -4,7 +4,7 @@
     $addProject = 'addProject.php';
     $editProject = 'editProject.php';
 
-    if(!empty($_GET['id'])) {
+    if (!empty($_GET['id'])) {
         $projectId = $_GET['id'];
         
         $sql = "SELECT `id`, `title`, `description`, `site_url`, `code_url` FROM `project`
