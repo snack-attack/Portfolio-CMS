@@ -9,9 +9,7 @@
         $query = $db->prepare($sql);
         $query->bindParam(':projectId', $projectId);
         $query->execute();
-        $project = $query->fetchAll();
-
-        var_dump($project);
+        $project = $query->fetch();
     }
 
 ?>
@@ -36,23 +34,20 @@
         <form method="POST" action="addProject.php">
             <div class="container">
                 <label for="title">Project Title</label>
-                <input type="text" placeholder="Enter Project Title" name="title" value="
-                <?php 
+                <input type="text" placeholder="Enter Project Title" name="title" value="<?php 
                     if(!empty($_GET)) { 
                         echo $project['title'];}  
                   ?>" required>
 
                 <label for="description">Description</label>
-                <textarea placeholder="Enter Description" name="description" required>
-                <?php
+                <textarea placeholder="Enter Description" name="description" required><?php
                     if(!empty($_GET)) {
                         echo $project['description'];
                     }
                 ?></textarea>
 
                 <label for="site_url">Site URL</label>
-                <input type="url" placeholder="Enter Site URL" name="site_url" value="
-                <?php
+                <input type="url" placeholder="Enter Site URL" name="site_url" value="<?php
                     if(!empty($_GET)) {
                         echo $project['site_url'];
                     }
@@ -60,10 +55,9 @@
                 "></input>
 
                 <label for="code_url">Code URL</label>
-                <input type="url" placeholder="Enter Site URL" name="code_url" value="
-                <?php
+                <input type="url" placeholder="Enter Site URL" name="code_url" value="<?php
                     if(!empty($_GET)) {
-                        echo $project[$code_url];
+                        echo $project['code_url'];
                     }
                 ?>
                 "></input>
