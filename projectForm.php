@@ -34,7 +34,7 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <h1>Create a New Project</h1>
-        <form method="POST" action="<?php if (!empty($_GET['id'])) { echo $editProject . '?id=' . $project['id']; } else { echo $addProject; }; ?>">
+        <form method="POST" action="<?= $editProject . '?id=' . $project['id'] ?? $addProject; ?>">
             <div class="container">
                 <label for="title">Project Title</label>
                 <input type="text" placeholder="Enter Project Title" name="title" value="<?= $project['title'] ?? ''; ?>" required>
