@@ -17,7 +17,9 @@ if (!empty($_GET)) {
 
     $query = $db->prepare($sql);
     $query->bindParam(':id', $id);
-    $query->execute();
+    $result = $query->execute();
 
-    header('Location:admin.php');
+    if ($result) { 
+        header('Location: admin.php');
+    } else { echo 'Oops! Something went wrong. Please try again.'; }
 } 
