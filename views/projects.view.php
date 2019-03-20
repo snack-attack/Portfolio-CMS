@@ -1,21 +1,10 @@
 <?php
-require_once './database.php';
 
-//get projects
-$sql = "SELECT `id`, `title`, `description`, `site_url`, `code_url` FROM `project`;";
-$query = $db->prepare($sql);
-$query->execute();
-$projects = $query->fetchAll();
+require_once './Project.php';
 
-//get tags
-$sql = "SELECT `id`, `name` FROM `tag`;";
-$query = $db->prepare($sql);
-$query->execute();
-$tags = $query->fetchAll();
+$projects = getProjects($db);
 
-
-
-if(!empty($projects)) {
+if (!empty($projects)) {
     foreach($projects as $project) {
         echo '<div class="';
         //alternate classes so the card style switches every other project

@@ -74,7 +74,7 @@
             </div>
             <div>
                 <?php 
-                    include_once('./projects.php');
+                    include_once('projects.view.php');
                 ?>
             </div> 
         </section>
