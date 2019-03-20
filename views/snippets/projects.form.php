@@ -28,6 +28,8 @@ $project = getProject($db);
                 <button type="submit">Submit</button>
             </div>
         </form> 
-        <button type="button" class="cancel">Back to Admin Panel</button>
+        <div class="backHome">
+            <a href="../admin.view.php" class="cancel">Back to Admin Panel</a>
+        </div>
 <?php
 include_once 'footer.php';
