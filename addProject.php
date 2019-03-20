@@ -23,7 +23,9 @@ if (!empty($_POST['title']) && !empty($_POST['description'])) {
 
     if ($result) { 
         header('Location: admin.php');
-    } else { echo 'Oops! Something went wrong. Please try again.'; }
+    } else { 
+        echo 'Oops! Something went wrong. Please try again.'; 
+    }
 
 }
 

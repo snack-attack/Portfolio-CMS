@@ -28,7 +28,9 @@ if (!empty($_GET['id'])) {
 
         if ($result) {
             header('Location:admin.php');
-        } else { echo 'Oops! Something went wrong. Please try again.'; }
+        } else { 
+            echo 'Oops! Something went wrong. Please try again.'; 
+        }
     }
 }
 
