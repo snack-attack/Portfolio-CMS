@@ -74,7 +74,7 @@ h1 {
     letter-spacing: 0.2rem;
 }
 
-h2 {
+h2, table .title h3 {
     font-size: 3rem;
     font-family: 'Montserrat', sans-serif;
 }
@@ -85,7 +85,7 @@ h3 {
 }
 
 p, 
-h4 {
+h4, td {
     font-family: 'Montserrat', sans-serif;
     font-size: 2rem;    
 }
@@ -545,84 +545,11 @@ footer {
 
 
 
-/**
- *
- * ADMIN AREA STYLES
- *
- */
- 
-/* Bordered form */
-form {
-    border: 3px solid #f1f1f1;
-    width: 50%;
-    margin: 3vh auto;
-}
-
-label, button, a {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2rem;
-    margin: 24px 0;   
-    font-weight: bold;
-}
-  
-/* Full-width inputs */
-input[type=text], input[type=password], input[type=url], textarea {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-}
-
-input[type=radio] {
-    margin: 1vh auto;
-}
-
-textarea {
-    max-width: 100%;
-}
-
-/* Set a style for all buttons */
-button, .cancel {
-    background-color: #F2C041;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-}
-.backHome {
-    width: 50%;
-    margin: 5rem auto;
-    text-align: center;
-}
-
-.cancel {
-    width: 50%;
-    text-decoration: none;
-    background-color: #FC5956;
-}
-
-/* Add a hover effect for buttons */
-button:hover, a:hover {
-    opacity: 0.8;
-}
-
-
-/* Add padding to containers */
-.container {
-    padding: 16px;
-}
-
-
-
 /*=============================================
-=            Admin Panel Styles
+=            ADMIN PANEL
 =============================================*/
 
-/* table {
+table {
     border: 1px solid #ccc;
     border-collapse: collapse;
     margin: 0 auto;
@@ -630,53 +557,37 @@ button:hover, a:hover {
     table-layout: fixed;
 }
 
-.thead {
+.admin-header {
+    text-align: center;
+}
+
+table .title {
     margin: 0 auto;
     width: 80%;
 }
-  
-h3 {
-    font-family: 'Anton', sans-serif;
-    font-size: 2rem;
-    letter-spacing: 0.2rem;
-    margin: 1rem auto;
-    text-align: left;
-    float: left;
+
+table .title h3 {
     width: 50%;
-}
-
-.thead a {
-    float: right;
-}
-
-.createNew {
-    background: #1C1B1F;
 }
   
 table tr {
     background-color: #f8f8f8;
     border: 1px solid #ddd;
-    padding: .35em;
+    padding: .35rem;
 }
 
 table th,
 table td {
-    padding: .625em;
+    padding: .625rem;
     text-align: center;
 }
 
 table th {
-    font-size: .85em;
-    letter-spacing: .1em;
+    font-size: 1.8rem;
     text-transform: uppercase;
 }
 
-form {
-    display: inline-block;
-    margin-right: 1vh;
-}
-
-a {
+td a, .title a {
     background-color: #F2C041;
     border: none;
     color: white;
@@ -685,6 +596,11 @@ a {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+}
+
+.title a {
+    background: #1C1B1F;
+    float: right;
 }
 
 #delete {
@@ -697,7 +613,7 @@ a {
     }
 
     table caption {
-        font-size: 1.3em;
+        font-size: 1.3rem;
     }
 
     table thead {
@@ -720,7 +636,7 @@ a {
     table td {
         border-bottom: 1px solid #ddd;
         display: block;
-        font-size: .8em;
+        font-size: 1rem;
         text-align: right;
     }
 
@@ -734,10 +650,7 @@ a {
     table td:last-child {
         border-bottom: 0;
     }
-} */
+}
 
-
-/*=====  End of Section Admin Panel Styles  ======*/
-
-
+/*=====  End of Section ADMIN PANEL  ======*/
 
