@@ -51,6 +51,8 @@
                 <button type="submit">Submit</button>
             </div>
         </form> 
-        <button type="button" class="cancel">Back to Admin Panel</button>
+        <div class="backHome">
+            <a href="./admin.php" class="cancel">Back to Admin Panel</a>
+        </div>
     </body>
 </html>
