@@ -30,9 +30,9 @@
         <![endif]-->
 <h1 class="admin-header">Welcome to the Admin Panel!</h1>
     <table>
-        <div class="title">
+        <div class="table-title">
             <h3>Projects</h3>
-            <a href="./projectForm.php" class="createNew">Create New Project</a>
+            <a href="snippets/projects.form.php" class="createNew">Create New Project</a>
         </div>
         <thead>
             <tr>
@@ -42,7 +42,7 @@
         </thead>
         <tbody>
             <?php
-                require_once 'projects.table.php';
+                require_once 'snippets/projects.table.php';
             ?>
         </tbody>
     </table>
