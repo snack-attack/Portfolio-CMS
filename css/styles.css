@@ -567,8 +567,9 @@ table div {
 }
 
 table .title h3 {
+    text-align: left;
+    float: left;
     width: 50%;
-    display: inline-block;
 }
 
 table tr {
