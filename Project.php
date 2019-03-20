@@ -1,7 +1,7 @@
 <?php
 require_once 'database.php';
 
-
+class Project {
 //get projects
 function getProjectTitles($db) {
     $sql = "SELECT `id`, `title` FROM `project`;";
@@ -92,7 +92,7 @@ function editProject($db) {
         }
     }
 }
-
+}
     
 
 

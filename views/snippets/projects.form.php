@@ -4,15 +4,12 @@ require_once '../../database.php';
 require_once '../../Project.php';
 require_once 'header.php';
 
-$addProject = 'addProject.php';
-$editProject = 'editProject.php';
-
 $project = getProject($db);
 
 ?>
         <h1>Create a New Project</h1>
-        <form method="POST" action="<?php echo (!empty($_GET['id'])) ? $editProject . '?id=' . $project['id'] : $addProject; ?>">
-            <div class="container">
+        <form method="POST">
+            <div class="container" action="">
                 <label for="title">Project Title</label>
                 <input type="text" placeholder="Enter Project Title" name="title" value="<?= $project['title'] ?? ''; ?>" required>
 
