@@ -561,15 +561,16 @@ table {
     text-align: center;
 }
 
-table .title {
+table div {
     margin: 0 auto;
     width: 80%;
 }
 
 table .title h3 {
     width: 50%;
+    display: inline-block;
 }
-  
+
 table tr {
     background-color: #f8f8f8;
     border: 1px solid #ddd;
