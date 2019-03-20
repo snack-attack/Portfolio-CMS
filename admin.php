@@ -1,4 +1,9 @@
 <?php
+
+if(empty($_SESSION['loggedIn']) || $_SESSION['loggedIn'] = false) {
+    header('Location = index.php');
+};
+
 require_once './database.php';
 
 //get projects
