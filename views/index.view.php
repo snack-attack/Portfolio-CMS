@@ -293,4 +293,3 @@
 
 <?php
     require_once 'snippets/footer.php';
-?>
