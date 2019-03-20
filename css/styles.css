@@ -542,3 +542,202 @@ footer {
     font-size: 3rem;
     color: #F8F8F8;
 }
+
+
+
+/**
+ *
+ * ADMIN AREA STYLES
+ *
+ */
+ 
+/* Bordered form */
+form {
+    border: 3px solid #f1f1f1;
+    width: 50%;
+    margin: 3vh auto;
+}
+
+label, button, a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    margin: 24px 0;   
+    font-weight: bold;
+}
+  
+/* Full-width inputs */
+input[type=text], input[type=password], input[type=url], textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+input[type=radio] {
+    margin: 1vh auto;
+}
+
+textarea {
+    max-width: 100%;
+}
+
+/* Set a style for all buttons */
+button, .cancel {
+    background-color: #F2C041;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+.backHome {
+    width: 50%;
+    margin: 5rem auto;
+    text-align: center;
+}
+
+.cancel {
+    width: 50%;
+    text-decoration: none;
+    background-color: #FC5956;
+}
+
+/* Add a hover effect for buttons */
+button:hover, a:hover {
+    opacity: 0.8;
+}
+
+
+/* Add padding to containers */
+.container {
+    padding: 16px;
+}
+
+
+
+/*=============================================
+=            Admin Panel Styles
+=============================================*/
+
+/* table {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    margin: 0 auto;
+    width: 80%;
+    table-layout: fixed;
+}
+
+.thead {
+    margin: 0 auto;
+    width: 80%;
+}
+  
+h3 {
+    font-family: 'Anton', sans-serif;
+    font-size: 2rem;
+    letter-spacing: 0.2rem;
+    margin: 1rem auto;
+    text-align: left;
+    float: left;
+    width: 50%;
+}
+
+.thead a {
+    float: right;
+}
+
+.createNew {
+    background: #1C1B1F;
+}
+  
+table tr {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: .35em;
+}
+
+table th,
+table td {
+    padding: .625em;
+    text-align: center;
+}
+
+table th {
+    font-size: .85em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
+
+form {
+    display: inline-block;
+    margin-right: 1vh;
+}
+
+a {
+    background-color: #F2C041;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+#delete {
+    background-color: #FC5956;
+}
+
+@media screen and (max-width: 600px) {
+    table {
+        border: 0;
+    }
+
+    table caption {
+        font-size: 1.3em;
+    }
+
+    table thead {
+        border: none;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+
+    table tr {
+        border-bottom: 3px solid #ddd;
+        display: block;
+        margin-bottom: .625em;
+    }
+
+    table td {
+        border-bottom: 1px solid #ddd;
+        display: block;
+        font-size: .8em;
+        text-align: right;
+    }
+
+    table td::before {
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    table td:last-child {
+        border-bottom: 0;
+    }
+} */
+
+
+/*=====  End of Section Admin Panel Styles  ======*/
+
+
+
