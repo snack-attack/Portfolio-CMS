@@ -115,7 +115,7 @@ function deleteProject($db) {
     } 
 }
 
-function alternateClass(&$count) {
+function alternateClass(int $count): string {
     if ($count % 2 == 0) { 
         return 'work-card';
     } else { 

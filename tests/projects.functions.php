@@ -19,9 +19,4 @@ class TestProjectsFunctions extends TestCase
         $class = alternateClass($count);
         $this->assertEquals('work-card', $class);
     }
-
-    // public function testShowProjects()
-    // {
-
-    // }
 }
