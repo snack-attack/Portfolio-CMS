@@ -1,12 +1,8 @@
 <?php
-require_once './database.php';
-
-//get projects
-$sql = "SELECT `id`, `title` FROM `project`;";
-$query = $db->prepare($sql);
-$query->execute();
-$projects = $query->fetchAll();
-
+    require_once 'database.php';
+    require_once 'projects.functions.php';
+    $db = connectDB();
+    $projects = getProjectTitles($db);
 ?>
 
 <!DOCTYPE html>
@@ -30,7 +26,7 @@ $projects = $query->fetchAll();
         <table>
             <div class="thead">
                 <h3>Projects</h3>
-                <a href="./projectForm.php" class="createNew">Create New Project</a>
+                <a href="form.view.php" class="createNew">Create New Project</a>
             </div>
             <thead>
                 <tr>
@@ -45,8 +41,8 @@ $projects = $query->fetchAll();
                         echo $project['title'];
                         echo '</td>
                             <td>
-                                <a href="projectForm.php?id=' . $project['id'] . '">Edit</a>
-                                <a href="deleteProject.php?id=' . $project['id'] . '" id="delete">Delete</a>
+                                <a href="form.view.php?id=' . $project['id'] . '">Edit</a>
+                                <a href="projects.route.php?id=' . $project['id'] . '&action=delete" id="delete">Delete</a>
                             </td>
                         </tr>';
                     }
