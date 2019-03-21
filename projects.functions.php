@@ -17,7 +17,6 @@ function getProjects($db) {
 function getProject($db) {
     if (!empty($_GET['id'])) {
         $projectId = $_GET['id'];
-        
         $sql = "SELECT `id`, `title`, `description`, `site_url`, `code_url` FROM `project`
                 WHERE `id`=:projectId;";
         $query = $db->prepare($sql);
@@ -53,7 +52,6 @@ function addProject($db) {
         } else { 
             echo 'Oops! Something went wrong. Please try again.'; 
         }
-    
     }
 }
 
@@ -115,4 +113,26 @@ function deleteProject($db) {
             echo 'Oops! Something went wrong. Please try again.'; 
         }
     } 
+}
+
+function alternateClass(&$count, $project) {
+    if ($count % 2 == 0) { 
+        return 'work-card';
+    } else { 
+        return 'work-card alt';
+    }
+}
+
+function showProjects($projects) {
+    if (!empty($projects)) {
+        $count = 0;
+        foreach($projects as $project) {
+            $count++;
+            echo '<div class="' . alternateClass($count, $project) . '"><div class="meta"><img src="./assets/img/workcard-backgrounds/';
+            //display a random photo
+            echo rand(1, 47);
+            echo '.jpg" class="photo" alt="photo of colored stucco-like texture"></div><div class="description"><h2>'. $project['title']. '</h2><h4>'; 
+            echo '</h4><p>' . $project['description'] . '</p><p class="read-more"><a href="' . $project['site_url'] . '">Visit Site</a></p></div></div></div>';
+        }
+    }
 }
