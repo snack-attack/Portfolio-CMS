@@ -1,7 +1,6 @@
 <?php
-    if (empty($_SESSION['loggedIn']) || $_SESSION['loggedIn'] = false) {
-        header('Location: index.php');
-    };
+    require_once 'sessions.functions.php';
+    checkSessionStatus();
 
     require_once 'database.php';
     require_once 'projects.functions.php';
