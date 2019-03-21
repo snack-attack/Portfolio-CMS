@@ -72,7 +72,7 @@
             </div>
             <div>
                 <?php 
-                    include_once('projects.view.php');
+                    include_once('snippets/projects.view.php');
                 ?>
             </div> 
         </section>
@@ -316,5 +316,5 @@
                 </ul>
             </nav>
         </footer>
-    </body>
-</html>
+<?php
+include_once 'snippets/footer.php';

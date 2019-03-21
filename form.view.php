@@ -19,7 +19,8 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="./css/projectForm.css">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/form.styles.css">
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -46,5 +47,5 @@
         <div class="backHome">
             <a href="admin.view.php" class="cancel">Back to Admin Panel</a>
         </div>
-    </body>
-</html>
+<?php
+include_once 'snippets/footer.php';

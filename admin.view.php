@@ -1,10 +1,10 @@
 <?php
     require_once 'database.php';
     require_once 'projects.functions.php';
+    require_once 'snippets/header.php';
     $db = connectDB();
     $projects = getProjectTitles($db);
 ?>
-
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -16,7 +16,8 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="./css/adminPanel.css">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/table.styles.css">
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -49,5 +50,5 @@
                 ?>
             </tbody>
         </table>
-    </body>
-</html>
+<?php
+require_once 'snippets/footer.php';
