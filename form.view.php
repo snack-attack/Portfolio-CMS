@@ -2,7 +2,7 @@
     require_once 'sessions.functions.php';
     session_start();
     $session = $_SESSION;
-    if (!checkSessionStatus($session)) {
+    if (checkSessionStatus($session)) {
         header('Location: index.php');
     }
     require_once 'database.php';
