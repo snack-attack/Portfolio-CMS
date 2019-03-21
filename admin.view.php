@@ -1,7 +1,6 @@
 <?php
     require_once 'database.php';
     require_once 'projects.functions.php';
-    require_once 'snippets/header.php';
     $db = connectDB();
     $projects = getProjectTitles($db);
 ?>
