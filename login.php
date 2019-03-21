@@ -9,7 +9,6 @@ if (!empty($_POST['uname']) && !empty($_POST['psw'])) {
     session_start();
     if ($username == USERNAME && password_verify($password, PASSWORD)) {
         $_SESSION['loggedIn'] = true;
-
         header('Location: admin.view.php');
     } else {
         header('Location: index.php');
