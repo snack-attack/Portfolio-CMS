@@ -1,4 +1,8 @@
 <?php
+    if (empty($_SESSION['loggedIn']) || $_SESSION['loggedIn'] = false) {
+        header('Location = index.php');
+    };
+
     require_once 'database.php';
     require_once 'projects.functions.php';
     $db = connectDB();
@@ -6,7 +10,6 @@
     if (!empty($_GET['id'])) {
         $project = getProject($db);
     }
-
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
