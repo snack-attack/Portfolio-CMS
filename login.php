@@ -1,7 +1,7 @@
 <?php
 
 define('USERNAME', 'audrey');
-define('PASSWORD', '$2y$10$TdIbbxTzrqo.DIgWPHw7t.Q1ZDLzzxHwPw.RBhVHVuIxL/eKoCp3O');
+define('PASSWORD', '$2y$10$TdIbbxTzrqo.DIgWPHw7t.Q1ZDLzzxHwPw.RBhVHVuIxL/eKoCp3O'); //password
 
 if (!empty($_POST['uname']) && !empty($_POST['psw'])) {
     $username = $_POST['uname'];
