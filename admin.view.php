@@ -1,6 +1,10 @@
 <?php
     require_once('sessions.functions.php');
-    checkSessionStatus();
+    session_start();
+    $session = $_SESSION;
+    if (!checkSessionStatus($session)) {
+        header('Location: index.php');
+    }
     require_once 'database.php';
     require_once 'projects.functions.php';
     $db = connectDB();

@@ -4,4 +4,4 @@ require_once 'projects.functions.php';
 $db = connectDB();
 $projects = getProjects($db);
 
-showProjects($projects);
+echo showProjects($projects);
