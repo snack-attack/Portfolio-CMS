@@ -115,7 +115,7 @@ function deleteProject($db) {
     } 
 }
 
-function alternateClass(&$count, $project) {
+function alternateClass(&$count) {
     if ($count % 2 == 0) { 
         return 'work-card';
     } else { 
@@ -128,7 +128,7 @@ function showProjects($projects) {
         $count = 0;
         foreach($projects as $project) {
             $count++;
-            echo '<div class="' . alternateClass($count, $project) . '"><div class="meta"><img src="./assets/img/workcard-backgrounds/';
+            echo '<div class="' . alternateClass($count) . '"><div class="meta"><img src="./assets/img/workcard-backgrounds/';
             //display a random photo
             echo rand(1, 47);
             echo '.jpg" class="photo" alt="photo of colored stucco-like texture"></div><div class="description"><h2>'. $project['title']. '</h2><h4>'; 
