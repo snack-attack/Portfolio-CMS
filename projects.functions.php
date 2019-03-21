@@ -123,15 +123,21 @@ function alternateClass(int $count): string {
     }
 }
 
+function shufflePhotoNumbers() {
+   $range = range(1, 47);
+   shuffle($range);
+   return $range;
+}
+
 function showProjects($projects) {
     if (!empty($projects)) {
         $count = 0;
         foreach($projects as $project) {
             $count++;
-            echo '<div class="' . alternateClass($count) . '"><div class="meta"><img src="./assets/img/workcard-backgrounds/';
-            //display a random photo
-            echo rand(1, 47);
-            echo '.jpg" class="photo" alt="photo of colored stucco-like texture"></div><div class="description"><h2>'. $project['title']. '</h2><h4>'; 
+            $range = shufflePhotoNumbers();
+            echo '<div class="' . alternateClass($count) . '"><div class="meta"><img src="./assets/img/workcard-backgrounds/' . 
+            array_pop($range) . '.jpg" class="photo" alt="photo of colored stucco-like texture"></div><div class="description"><h2>'. 
+            $project['title']. '</h2><h4>'; 
             echo '</h4><p>' . $project['description'] . '</p><p class="read-more"><a href="' . $project['site_url'] . '">Visit Site</a></p></div></div></div>';
         }
     }
