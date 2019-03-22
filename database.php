@@ -1,10 +1,5 @@
 <?php
 
-// $db_server = 'mysql:host=192.168.20.20';
-// $db_username = 'root';
-// $db_password = '';
-// $db_database = 'portfolio-cms';
-
 // Create a connection
 
 function connectDB() {
