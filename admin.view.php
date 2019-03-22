@@ -1,14 +1,15 @@
 <?php
-require_once './database.php';
-
-//get projects
-$sql = "SELECT `id`, `title` FROM `project`;";
-$query = $db->prepare($sql);
-$query->execute();
-$projects = $query->fetchAll();
-
+    require_once('sessions.functions.php');
+    session_start();
+    $session = $_SESSION;
+    if (checkSessionStatus($session)) {
+        header('Location: index.php');
+    }
+    require_once 'database.php';
+    require_once 'projects.functions.php';
+    $db = connectDB();
+    $projects = getProjectTitles($db);
 ?>
-
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -20,7 +21,8 @@ $projects = $query->fetchAll();
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="./css/adminPanel.css">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/table.styles.css">
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -30,7 +32,7 @@ $projects = $query->fetchAll();
         <table>
             <div class="thead">
                 <h3>Projects</h3>
-                <a href="./projectForm.php" class="createNew">Create New Project</a>
+                <a href="form.view.php" class="createNew">Create New Project</a>
             </div>
             <thead>
                 <tr>
@@ -45,13 +47,13 @@ $projects = $query->fetchAll();
                         echo $project['title'];
                         echo '</td>
                             <td>
-                                <a href="projectForm.php?id=' . $project['id'] . '">Edit</a>
-                                <a href="deleteProject.php?id=' . $project['id'] . '" id="delete">Delete</a>
+                                <a href="form.view.php?id=' . $project['id'] . '">Edit</a>
+                                <a href="projects.route.php?id=' . $project['id'] . '&action=delete" id="delete">Delete</a>
                             </td>
                         </tr>';
                     }
                 ?>
             </tbody>
         </table>
-    </body>
-</html>
+<?php
+require_once 'snippets/footer.php';
